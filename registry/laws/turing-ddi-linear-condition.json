@@ -1,0 +1,69 @@
+{
+  "law_id": "turing-ddi-linear-condition",
+  "version": "1.0.0",
+  "kind": "biological",
+  "class": "theorem",
+  "status": "candidate",
+  "label": "Turing's condition for diffusion-driven instability (two species, linear)",
+  "level": null,
+  "lean_ref": {
+    "module": "lean/Delphi/Turing.lean",
+    "theorem": "Delphi.Turing.turing_instability_iff",
+    "structure": null,
+    "commit": "a90bb3ac45630b46052e7a959b61088db7834b97",
+    "statement_sha256": "ad1566f469cb6c37d69fe8089e3849834a7c525b42e19e20106ad25e3befbf95",
+    "content_hash": "ad1ce09fddd7640041342d5a35a64f2d3e113587ea0573fa7b349206a7fcf01d"
+  },
+  "statement_en": "For the linearisation of a two-species reaction-diffusion system at a uniform steady state that is stable without diffusion (trace of J negative, determinant positive), some spatial mode q > 0 is linearly unstable if and only if 2*sqrt(Du*Dv*det J) < Dv*a + Du*d. Corollary: with equal diffusivities no mode is unstable (two species only).",
+  "hypotheses": [
+    {
+      "name": "Delphi.Turing.WellMixedStable",
+      "statement": "The uniform steady state is stable without diffusion: a + d < 0 and a*d - b*c > 0 for the reaction Jacobian ![![a,b],![c,d]].",
+      "source": "Turing (1952) Phil. Trans. R. Soc. B 237:37-72, doi:10.1098/rstb.1952.0012 (resolved via Crossref 2026-11-02); claim notation of turing-ddi in claim-sources/math-bio-claims/claims/key-claims.json"
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "a theorem about a model: two species, smooth kinetics linearised about a homogeneous steady state, constant positive diffusivities, unbounded domain (all real q admissible), no growth or mechanics. The equal-diffusivity corollary is two-species only: with three or more species Turing instability with equal diffusivities is possible (Marcon et al. 2016, doi:10.7554/eLife.14022)."
+  },
+  "shared_scope": null,
+  "evidence": {
+    "sources": [
+      "doi:10.1098/rstb.1952.0012",
+      "doi:10.7554/eLife.14022"
+    ],
+    "observations": [],
+    "note": "A proof that the condition follows from the linearised model; it says nothing about whether any tissue is such a system. The claim's instantiation in organisms is the turing-1952-* instance claims and turing-morphogen-hypothesis."
+  },
+  "sources": [
+    "doi:10.1098/rstb.1952.0012"
+  ],
+  "non_vacuity_witness": {
+    "lean": "Delphi.Turing.witness",
+    "statement": "theorem witness : Nonempty Instance",
+    "file": "lean/Delphi/Turing.lean"
+  },
+  "constraints": [],
+  "introduced_in": null,
+  "supersedes": null,
+  "superseded_by": null,
+  "retired_reason": null,
+  "contested_with": [],
+  "approval": null,
+  "origin": {
+    "by_role": "agent:cursor-session (claude-fable-5-1)",
+    "kind": "agent"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "change": "propose.mjs against lawset 1.6.0: candidate"
+    }
+  ],
+  "content_hash": "ad1ce09fddd7640041342d5a35a64f2d3e113587ea0573fa7b349206a7fcf01d"
+}

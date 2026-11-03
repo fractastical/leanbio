@@ -9,6 +9,7 @@ import Delphi.MaynardSmith
 import Delphi.Favored
 import Delphi.Blueprint
 import Delphi.Thompson
+import Delphi.Turing
 import Delphi.Certificates.AFlyingFish
 import Delphi.Constraints
 
@@ -57,3 +58,6 @@ import Delphi.Constraints
 #print axioms Delphi.Constraints.kimura_rate_ratio_rules_out
 #print axioms Delphi.Constraints.fisher_zero_variance_rules_out
 #print axioms Delphi.Constraints.twofold_factor_rules_out
+#print axioms Delphi.Turing.turing_instability_iff
+#print axioms Delphi.Turing.no_instability_of_equal_diffusivity
+#print axioms Delphi.Turing.witness
