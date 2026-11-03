@@ -1,0 +1,53 @@
+{
+  "law_id": "twelve-pentagons",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "label": "A trivalent closed lattice of pentagons and hexagons has exactly twelve pentagons",
+  "level": "organism",
+  "statement_en": "A closed lattice shell with three struts at every node and faces that are all pentagons or hexagons has exactly twelve pentagons, however many hexagons it has and whatever it is made of. A topological consequence of Euler's formula, not a proof of Thompson's empirical claim that lattice-shell form is independent of biomineral composition.",
+  "lean": {
+    "theorem": "Delphi.CellGeometry.pentagons_eq_twelve",
+    "witness": "Delphi.CellGeometry.pentagons_eq_twelve_witness"
+  },
+  "hypotheses": [
+    {
+      "name": "Delphi.CellGeometry.PentagonHexagonSphere",
+      "statement": "Integers V, E, P, H with V - E + (P + H) = 2, 2E = 3V and 2E = 5P + 6H."
+    },
+    {
+      "name": "twelve-pentagons#assumed-1",
+      "statement": "Sphere topology and strictly trivalent nodes. Real radiolarian and diatom lattices have defects (four-valent nodes, heptagons) that change the count; the law describes the ideal lattice."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "combinatorial identity (Euler + two handshakings); applies to every trivalent pentagon-hexagon map on the sphere",
+    "kernelChecked": [
+      "Exact: P = 12 for every PentagonHexagonSphere (pentagons_eq_twelve).",
+      "Non-vacuity: the truncated icosahedron, 60 vertices, 90 edges, 12 pentagons, 20 hexagons (pentagons_eq_twelve_witness)."
+    ],
+    "assumed": [
+      "Sphere topology, trivalent nodes, only pentagonal and hexagonal faces."
+    ]
+  },
+  "evidence": {
+    "sources": [
+      "On Growth and Form (1917), chapter XVI (claim thompson1917-ch16-14; Lean port of ThompsonLaws.TwelvePentagons.pentagons_eq_twelve)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "On Growth and Form (1917), chapter XVI (claim thompson1917-ch16-14)"
+  ],
+  "origin": {
+    "by_role": "lean-thread",
+    "kind": "agent",
+    "from": "port of Lean-checked Thompson claims (claim-sources/thompson-growth-form/lean/ThompsonLaws) into the registry, plus three new geometry laws, at the project lead's request (Nov 2)"
+  }
+}

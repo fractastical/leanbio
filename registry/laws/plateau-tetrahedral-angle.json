@@ -1,0 +1,83 @@
+{
+  "law_id": "plateau-tetrahedral-angle",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "status": "candidate",
+  "label": "Plateau's second rule: four equal-tension walls meet at arccos(-1/3), about 109.5 degrees",
+  "level": "cell",
+  "lean_ref": {
+    "module": "lean/Delphi/CellGeometry.lean",
+    "theorem": "Delphi.CellGeometry.tetrahedralJunction_angle",
+    "structure": null,
+    "commit": "da554e15b23e3d5b54ed63e05ef09bc96d365458",
+    "statement_sha256": "8609e1d1feb3c5d09195c39aef1dc39dbdc40208c8b0919b1c55b8bf9d879278",
+    "content_hash": "d690ed9425e845e60d3a58e7eb06d553d9b606b36ad3c33082951b9a2ba219bd"
+  },
+  "statement_en": "Where four fluid walls of the same positive tension meet at a point, balance, and make equal angles with one another, each pair meets at arccos(-1/3) (109° 28′, the tetrahedral angle): more than a right angle and less than the 120 degrees of a triple junction. Without the symmetry assumption, the six pairwise cosines still sum to -2.",
+  "hypotheses": [
+    {
+      "name": "plateau-tetrahedral-angle#assumed-1",
+      "statement": "Fluid walls of uniform equal tension in static equilibrium: the vector sum of the four tensions along the wall directions is zero."
+    },
+    {
+      "name": "plateau-tetrahedral-angle#assumed-2",
+      "statement": "Equal pairwise angles (the six inner products equal). Plateau's rule also says that in a stable foam exactly four edges meet at a vertex; that stability statement is not formalised here."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "a theorem about a model of fluid walls under tension; it applies wherever the walls are such films and accepts the hypotheses in scope.assumed",
+    "kernelChecked": [
+      "Exact: four unit vectors balanced under equal positive tension have pairwise cosines summing to -2 (quadJunction_inner_sum).",
+      "With all six cosines equal to c0: c0 = -1/3, angle = arccos(-1/3), and π/2 < angle < 2π/3 (tetrahedralJunction_angle).",
+      "Non-vacuity: the four unit vectors (±1, ±1, ±1)/√3 with an even number of minus signs (tetrahedralJunction_angle_witness)."
+    ],
+    "assumed": [
+      "Fluid walls of uniform equal tension in static equilibrium.",
+      "Equal pairwise angles; the 'exactly four edges per vertex' stability clause of Plateau's rule is not formalised."
+    ]
+  },
+  "shared_scope": null,
+  "evidence": {
+    "sources": [
+      "Plateau, Statique expérimentale et théorique des liquides soumis aux seules forces moléculaires (1873), second rule",
+      "On Growth and Form (1917), chapter VII (the rhombic-dodecahedron angle of the bee's cell, claim thompson1917-ch07-11, is the same angle)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "Plateau (1873), second rule",
+    "On Growth and Form (1917), chapter VII"
+  ],
+  "non_vacuity_witness": {
+    "lean": "Delphi.CellGeometry.tetrahedralJunction_angle_witness",
+    "statement": "theorem tetrahedralJunction_angle_witness : ∃ a b c d : EuclideanSpace ℝ (Fin 3), ‖a‖ = 1 ∧ ‖b‖ = 1 ∧ ‖c‖ = 1 ∧ ‖d‖ = 1 ∧ quadJunctionBalanced 1 a b c d ∧ inner ℝ a b = -(1 / 3) ∧ inner ℝ a c = -(1 / 3) ∧ inner ℝ a d = -(1 / 3) ∧ inner ℝ b c = -(1 / 3) ∧ inner ℝ b d = -(1 / 3) ∧ inner ℝ c d = -(1 / 3)",
+    "file": "lean/Delphi/CellGeometry.lean"
+  },
+  "constraints": [],
+  "introduced_in": null,
+  "supersedes": null,
+  "superseded_by": null,
+  "retired_reason": null,
+  "contested_with": [],
+  "approval": null,
+  "origin": {
+    "by_role": "lean-thread",
+    "kind": "agent",
+    "from": "new formalisation (Nov 2): Plateau's second rule, requested alongside the 120-degree port"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "change": "propose.mjs against lawset 1.6.0: candidate"
+    }
+  ],
+  "content_hash": "d690ed9425e845e60d3a58e7eb06d553d9b606b36ad3c33082951b9a2ba219bd"
+}

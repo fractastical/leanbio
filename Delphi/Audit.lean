@@ -10,6 +10,7 @@ import Delphi.Favored
 import Delphi.Blueprint
 import Delphi.Thompson
 import Delphi.Turing
+import Delphi.CellGeometry
 import Delphi.Certificates.AFlyingFish
 import Delphi.Constraints
 
@@ -44,6 +45,14 @@ import Delphi.Constraints
 #print axioms Delphi.cubeLaw_ratio
 #print axioms Delphi.cubeLaw_loglog_exponent
 #print axioms Delphi.not_cubeLaw_of_exponent_ne_three
+#print axioms Delphi.CellGeometry.tripleJunction_120
+#print axioms Delphi.CellGeometry.hexagon_of_120
+#print axioms Delphi.CellGeometry.average_sides
+#print axioms Delphi.CellGeometry.pentagons_eq_twelve
+#print axioms Delphi.CellGeometry.beeCellArea_min
+#print axioms Delphi.CellGeometry.beeCell_rhombus_angle
+#print axioms Delphi.CellGeometry.tetrahedralJunction_angle
+#print axioms Delphi.CellGeometry.hex_denser_than_square
 #print axioms Delphi.Constraints.kimura_rate_rules_out
 #print axioms Delphi.Constraints.neutral_fixation_rules_out
 #print axioms Delphi.Constraints.favored_fixation_rules_out

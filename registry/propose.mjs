@@ -60,14 +60,19 @@ function mutantsOf(src, decl) {
   let end;
   if (isStruct) { end = code.indexOf('\n', start); const re2 = /\r?\n([ \t]+\S[^\n]*)/y; re2.lastIndex = end; while (re2.exec(code)) end = re2.lastIndex; }
   else { end = code.indexOf(':=', start); if (end < 0) end = code.length; }
-  const FLIP = { '≤': '>', '<': '≥', '≥': '<', '>': '≤' };
+  const FLIP = { '≤': '>', '<': '≥', '≥': '<', '>': '≤', '=': '≠' };
+  // `=` is flipped only when it is a bare equality: not part of `:=`, `=>`, `==`, `!=`, `<=`, `>=`.
+  const bareEq = i => code[i] === '=' && !['!', '=', ':', '<', '>'].includes(code[i - 1]) && !['=', '>'].includes(code[i + 1]);
   for (let i = start; i < end; i++) {
     const ch = code[i];
-    if (FLIP[ch] && !(ch === '<' && code[i + 1] === '|') && !(ch === '>' && code[i - 1] === '=' ) && !(ch === '>' && code[i - 1] === '-')) {
-      out.push({ at: i, from: ch, to: FLIP[ch], src: code.slice(0, i) + FLIP[ch] + code.slice(i + 1) });
-    }
+    if (!FLIP[ch]) continue;
+    if (ch === '=' && !bareEq(i)) continue;
+    if (ch === '<' && (code[i + 1] === '|' || code[i + 1] === '=')) continue;
+    if (ch === '>' && (code[i - 1] === '=' || code[i - 1] === '-')) continue;
+    out.push({ at: i, from: ch, to: FLIP[ch], src: code.slice(0, i) + FLIP[ch] + code.slice(i + 1) });
   }
-  return out.slice(0, 8);
+  // Up to 8 mutants, order relations first so a statement rich in `=` hypotheses still gets its inequalities flipped.
+  return [...out.filter(m => m.from !== '='), ...out.filter(m => m.from === '=')].slice(0, 8);
 }
 
 export async function propose(file, meta, opts = {}) {

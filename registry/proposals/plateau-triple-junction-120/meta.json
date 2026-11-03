@@ -1,0 +1,57 @@
+{
+  "law_id": "plateau-triple-junction-120",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "label": "Plateau's first rule: three equal-tension walls meet at 120 degrees",
+  "level": "cell",
+  "statement_en": "Where three fluid walls of the same positive tension meet at a point and balance, every pair of walls meets at exactly 120 degrees; the sizes of the cells on either side never enter. Stated in any real inner-product space, so it covers both cell walls seen in section and soap films meeting along an edge in three dimensions.",
+  "lean": {
+    "theorem": "Delphi.CellGeometry.tripleJunction_120",
+    "witness": "Delphi.CellGeometry.tripleJunction_120_witness"
+  },
+  "hypotheses": [
+    {
+      "name": "plateau-triple-junction-120#assumed-1",
+      "statement": "The walls are fluid films of uniform tension in static equilibrium: the junction condition is the vector sum of the three tensions along the wall directions being zero (Neumann's triangle). Nothing is said about how a tissue reaches equilibrium or whether a given epithelium is one."
+    },
+    {
+      "name": "plateau-triple-junction-120#assumed-2",
+      "statement": "Equal tension on all three walls. With unequal tensions the angles follow junction_inner (T3^2 = T1^2 + T2^2 + 2 T1 T2 cos angle) and are not 120 degrees."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "a theorem about a model of fluid walls under tension; it applies wherever the walls are such films and accepts the hypotheses in scope.assumed",
+    "kernelChecked": [
+      "Exact: T•u + T•v + T•w = 0 with unit u, v, w and T > 0 gives angle(u,v) = angle(v,w) = angle(u,w) = 2π/3 (tripleJunction_120).",
+      "General Neumann triangle: T3^2 = T1^2 + T2^2 + 2 T1 T2 <u,v> (junction_inner).",
+      "Non-vacuity: the unit vectors at 0, 120 and 240 degrees in the plane are balanced under equal tension (tripleJunction_120_witness)."
+    ],
+    "assumed": [
+      "Fluid walls of uniform tension in static equilibrium (force balance at the junction is the whole model).",
+      "Equal tension on all three walls."
+    ]
+  },
+  "evidence": {
+    "sources": [
+      "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-04; Lean port of ThompsonLaws.Cells.tripleJunction_120)",
+      "Plateau, Statique expérimentale et théorique des liquides soumis aux seules forces moléculaires (1873), first rule"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-04)",
+    "Plateau (1873), first rule"
+  ],
+  "origin": {
+    "by_role": "lean-thread",
+    "kind": "agent",
+    "from": "port of Lean-checked Thompson claims (claim-sources/thompson-growth-form/lean/ThompsonLaws) into the registry, plus three new geometry laws, at the project lead's request (Nov 2)"
+  }
+}

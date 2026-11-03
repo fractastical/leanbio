@@ -1,0 +1,54 @@
+{
+  "law_id": "hexagonal-on-average",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "label": "In a trivalent closed lattice the mean number of sides per face is 6 - 12/F",
+  "level": "tissue",
+  "statement_en": "In any closed lattice where three edges meet at every vertex (a map on the sphere), the mean number of sides per face is 6 - 12/F for F faces: always below six and approaching six as the lattice grows. This is Euler's formula and handshaking, true of every such lattice, so it is uninformative about which lattice an organism builds (the identity-kind reading of Thompson's 'hexagonal on average').",
+  "lean": {
+    "theorem": "Delphi.CellGeometry.average_sides",
+    "witness": "Delphi.CellGeometry.average_sides_witness"
+  },
+  "hypotheses": [
+    {
+      "name": "Delphi.CellGeometry.TrivalentSphere",
+      "statement": "Integers V, E, F with V - E + F = 2 (Euler, sphere topology), 2E = 3V (every vertex trivalent) and F > 0."
+    },
+    {
+      "name": "hexagonal-on-average#assumed-1",
+      "statement": "Sphere topology. On a torus (V - E + F = 0) the mean is exactly six; on a plane patch boundary faces break the count. Thompson's cells in a sheet are approximated by the large-F limit."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "combinatorial identity (Euler + handshaking); applies to every trivalent map on the sphere",
+    "kernelChecked": [
+      "Exact: 2E/F = 6 - 12/F and 2E/F < 6 for every TrivalentSphere (average_sides).",
+      "Non-vacuity: the dodecahedron (average_sides_witness)."
+    ],
+    "assumed": [
+      "Sphere topology; the finite plane patch is the large-F approximation.",
+      "Trivalent vertices (the generic stable junction of plateau-triple-junction-120)."
+    ]
+  },
+  "evidence": {
+    "sources": [
+      "On Growth and Form (1917), chapter VII (claims thompson1917-ch07-08 and thompson1917-ch07-10, tagged formalization identity in claim-sources/math-bio style)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "On Growth and Form (1917), chapter VII (claims thompson1917-ch07-08, thompson1917-ch07-10)"
+  ],
+  "origin": {
+    "by_role": "lean-thread",
+    "kind": "agent",
+    "from": "new formalisation (Nov 2): the Euler bookkeeping behind Thompson's 'hexagonal on average'"
+  }
+}

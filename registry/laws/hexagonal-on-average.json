@@ -1,0 +1,80 @@
+{
+  "law_id": "hexagonal-on-average",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "status": "candidate",
+  "label": "In a trivalent closed lattice the mean number of sides per face is 6 - 12/F",
+  "level": "tissue",
+  "lean_ref": {
+    "module": "lean/Delphi/CellGeometry.lean",
+    "theorem": "Delphi.CellGeometry.average_sides",
+    "structure": null,
+    "commit": "da554e15b23e3d5b54ed63e05ef09bc96d365458",
+    "statement_sha256": "2a2d1014f9f5f52ee603bbefbfbc076e878552bb3de67562b53c419f04b0afc7",
+    "content_hash": "932b864886567f273580fdd460cfde4957bc02f15f637c9ea98c1c1008cc1eb3"
+  },
+  "statement_en": "In any closed lattice where three edges meet at every vertex (a map on the sphere), the mean number of sides per face is 6 - 12/F for F faces: always below six and approaching six as the lattice grows. This is Euler's formula and handshaking, true of every such lattice, so it is uninformative about which lattice an organism builds (the identity-kind reading of Thompson's 'hexagonal on average').",
+  "hypotheses": [
+    {
+      "name": "Delphi.CellGeometry.TrivalentSphere",
+      "statement": "Integers V, E, F with V - E + F = 2 (Euler, sphere topology), 2E = 3V (every vertex trivalent) and F > 0."
+    },
+    {
+      "name": "hexagonal-on-average#assumed-1",
+      "statement": "Sphere topology. On a torus (V - E + F = 0) the mean is exactly six; on a plane patch boundary faces break the count. Thompson's cells in a sheet are approximated by the large-F limit."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "combinatorial identity (Euler + handshaking); applies to every trivalent map on the sphere",
+    "kernelChecked": [
+      "Exact: 2E/F = 6 - 12/F and 2E/F < 6 for every TrivalentSphere (average_sides).",
+      "Non-vacuity: the dodecahedron (average_sides_witness)."
+    ],
+    "assumed": [
+      "Sphere topology; the finite plane patch is the large-F approximation.",
+      "Trivalent vertices (the generic stable junction of plateau-triple-junction-120)."
+    ]
+  },
+  "shared_scope": null,
+  "evidence": {
+    "sources": [
+      "On Growth and Form (1917), chapter VII (claims thompson1917-ch07-08 and thompson1917-ch07-10, tagged formalization identity in claim-sources/math-bio style)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "On Growth and Form (1917), chapter VII (claims thompson1917-ch07-08, thompson1917-ch07-10)"
+  ],
+  "non_vacuity_witness": {
+    "lean": "Delphi.CellGeometry.average_sides_witness",
+    "statement": "theorem average_sides_witness : ∃ S : TrivalentSphere, S.faces = 12",
+    "file": "lean/Delphi/CellGeometry.lean"
+  },
+  "constraints": [],
+  "introduced_in": null,
+  "supersedes": null,
+  "superseded_by": null,
+  "retired_reason": null,
+  "contested_with": [],
+  "approval": null,
+  "origin": {
+    "by_role": "lean-thread",
+    "kind": "agent",
+    "from": "new formalisation (Nov 2): the Euler bookkeeping behind Thompson's 'hexagonal on average'"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "change": "propose.mjs against lawset 1.6.0: candidate"
+    }
+  ],
+  "content_hash": "932b864886567f273580fdd460cfde4957bc02f15f637c9ea98c1c1008cc1eb3"
+}

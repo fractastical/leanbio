@@ -1,0 +1,176 @@
+{
+  "law_id": "hexagonal-lattice-density",
+  "status": "candidate",
+  "lawset": "1.6.0",
+  "steps": {
+    "forbidden": {
+      "ok": true,
+      "found": []
+    },
+    "build": {
+      "ok": true,
+      "output": "'Delphi.CellGeometry.hex_denser_than_square' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Delphi.CellGeometry.hex_denser_than_square_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "axioms": {
+      "ok": true,
+      "printed": {
+        "Delphi.CellGeometry.hex_denser_than_square": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delphi.CellGeometry.hex_denser_than_square_witness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "witness": {
+      "ok": true,
+      "name": "Delphi.CellGeometry.hex_denser_than_square_witness",
+      "statement": "theorem hex_denser_than_square_witness : ∃ r : ℝ, 0 < r",
+      "via": "names the declaration"
+    },
+    "joint": {
+      "ok": true,
+      "lawset": "1.6.0",
+      "peers": [],
+      "outcome": "theorem from standard axioms with no shared-scope hypotheses: consistent with every satisfiable law set"
+    },
+    "bridge": {
+      "ok": true,
+      "note": "no structure"
+    },
+    "mutants": {
+      "ok": true,
+      "results": [
+        {
+          "at": 18745,
+          "line": 376,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 18876,
+          "line": 378,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 18920,
+          "line": 379,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 18978,
+          "line": 379,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 18783,
+          "line": 377,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 18830,
+          "line": 377,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "reasons": [],
+  "law": {
+    "law_id": "hexagonal-lattice-density",
+    "version": "1.0.0",
+    "kind": "physical",
+    "class": "theorem",
+    "status": "candidate",
+    "label": "Equal discs on the hexagonal lattice fill π/(2√3) of the plane, more than the square lattice's π/4",
+    "level": "tissue",
+    "lean_ref": {
+      "module": "lean/Delphi/CellGeometry.lean",
+      "theorem": "Delphi.CellGeometry.hex_denser_than_square",
+      "structure": null,
+      "commit": "da554e15b23e3d5b54ed63e05ef09bc96d365458",
+      "statement_sha256": "b97289e7e4d8f9fc7dbabf8132fbd8ec97c0c6ab5e777ed353ebf3944a6a4e2b",
+      "content_hash": "f9e9f87ebb69c914ffff54d18b4a67d710ec27acde030a99fbdb1cb12498bab4"
+    },
+    "statement_en": "Equal discs of radius r arranged on the hexagonal (triangular) lattice cover π/(2√3) of the plane, between 0.9068 and 0.9070; on the square lattice they cover π/4; the hexagonal lattice is the denser of the two. This compares two lattice arrangements. It does not prove that the hexagonal arrangement is the densest of all packings of equal discs (Thue 1910, Fejes Tóth 1940), which is not formalised.",
+    "hypotheses": [
+      {
+        "name": "hexagonal-lattice-density#assumed-1",
+        "statement": "Density is the disc area per fundamental cell: a rhombus of side 2r and angle 60 degrees (area 2√3 r²) for the hexagonal lattice, a square of side 2r for the square lattice, one disc each."
+      },
+      {
+        "name": "hexagonal-lattice-density#assumed-2",
+        "statement": "Optimality over all packings (Thue/Fejes Tóth) is NOT part of this law. Nor is any statement about cells, which are not rigid discs: Thompson's own point is that close-packed deformable cells become hexagons, which is hexagon-of-120, not this."
+      }
+    ],
+    "scope": {
+      "taxa": [
+        "any"
+      ],
+      "life_stages": [],
+      "ranges": {},
+      "basis": "Euclidean plane geometry of two lattice packings; applies to the model only",
+      "kernelChecked": [
+        "Exact: disc/hex cell = π/(2√3), disc/square cell = π/4, and π/4 < π/(2√3) (hex_denser_than_square).",
+        "Numeric: 0.9068 < π/(2√3) < 0.9070, from Mathlib's bounds on π to six decimals and √3 to seven.",
+        "Non-vacuity: any positive radius (hex_denser_than_square_witness)."
+      ],
+      "assumed": [
+        "Density defined per fundamental cell of the lattice.",
+        "Comparison of two lattices only; optimality over all packings is not proved here."
+      ]
+    },
+    "shared_scope": null,
+    "evidence": {
+      "sources": [
+        "On Growth and Form (1917), chapter VII (close packing of cells; claims thompson1917-ch07-08 to -13 discuss the hexagonal arrangement)"
+      ],
+      "observations": [],
+      "faithfulness": "not assessed"
+    },
+    "sources": [
+      "On Growth and Form (1917), chapter VII"
+    ],
+    "non_vacuity_witness": {
+      "lean": "Delphi.CellGeometry.hex_denser_than_square_witness",
+      "statement": "theorem hex_denser_than_square_witness : ∃ r : ℝ, 0 < r",
+      "file": "lean/Delphi/CellGeometry.lean"
+    },
+    "constraints": [],
+    "introduced_in": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "retired_reason": null,
+    "contested_with": [],
+    "approval": null,
+    "origin": {
+      "by_role": "lean-thread",
+      "kind": "agent",
+      "from": "new formalisation (Nov 2): hexagonal lattice packing density, labelled as a lattice comparison and not the Thue/Fejes Tóth optimality theorem"
+    },
+    "history": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-03",
+        "change": "propose.mjs against lawset 1.6.0: candidate"
+      }
+    ],
+    "content_hash": "f9e9f87ebb69c914ffff54d18b4a67d710ec27acde030a99fbdb1cb12498bab4"
+  },
+  "checked_at": "2026-11-03T02:21:48.598Z"
+}

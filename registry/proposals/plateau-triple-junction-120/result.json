@@ -1,0 +1,185 @@
+{
+  "law_id": "plateau-triple-junction-120",
+  "status": "candidate",
+  "lawset": "1.6.0",
+  "steps": {
+    "forbidden": {
+      "ok": true,
+      "found": []
+    },
+    "build": {
+      "ok": true,
+      "output": "'Delphi.CellGeometry.tripleJunction_120' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Delphi.CellGeometry.tripleJunction_120_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "axioms": {
+      "ok": true,
+      "printed": {
+        "Delphi.CellGeometry.tripleJunction_120": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delphi.CellGeometry.tripleJunction_120_witness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "witness": {
+      "ok": true,
+      "name": "Delphi.CellGeometry.tripleJunction_120_witness",
+      "statement": "theorem tripleJunction_120_witness : ∃ u v w : EuclideanSpace ℝ (Fin 2), ‖u‖ = 1 ∧ ‖v‖ = 1 ∧ ‖w‖ = 1 ∧ junctionBalanced 1 1 1 u v w",
+      "via": "names the declaration"
+    },
+    "joint": {
+      "ok": true,
+      "lawset": "1.6.0",
+      "peers": [],
+      "outcome": "theorem from standard axioms with no shared-scope hypotheses: consistent with every satisfiable law set"
+    },
+    "bridge": {
+      "ok": true,
+      "note": "no structure"
+    },
+    "mutants": {
+      "ok": true,
+      "results": [
+        {
+          "at": 4693,
+          "line": 83,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 4724,
+          "line": 84,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4739,
+          "line": 84,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4754,
+          "line": 84,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4831,
+          "line": 85,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4876,
+          "line": 85,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4927,
+          "line": 86,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "reasons": [],
+  "law": {
+    "law_id": "plateau-triple-junction-120",
+    "version": "1.0.0",
+    "kind": "physical",
+    "class": "theorem",
+    "status": "candidate",
+    "label": "Plateau's first rule: three equal-tension walls meet at 120 degrees",
+    "level": "cell",
+    "lean_ref": {
+      "module": "lean/Delphi/CellGeometry.lean",
+      "theorem": "Delphi.CellGeometry.tripleJunction_120",
+      "structure": null,
+      "commit": "da554e15b23e3d5b54ed63e05ef09bc96d365458",
+      "statement_sha256": "c40a1dc2bbc5144138181bffeaa6d898bddd4d45545aa888e9824a47acda797e",
+      "content_hash": "1f2ad08790f6385194b294ee6f8a627875b4a87e12927b7888cd33ab20a44d73"
+    },
+    "statement_en": "Where three fluid walls of the same positive tension meet at a point and balance, every pair of walls meets at exactly 120 degrees; the sizes of the cells on either side never enter. Stated in any real inner-product space, so it covers both cell walls seen in section and soap films meeting along an edge in three dimensions.",
+    "hypotheses": [
+      {
+        "name": "plateau-triple-junction-120#assumed-1",
+        "statement": "The walls are fluid films of uniform tension in static equilibrium: the junction condition is the vector sum of the three tensions along the wall directions being zero (Neumann's triangle). Nothing is said about how a tissue reaches equilibrium or whether a given epithelium is one."
+      },
+      {
+        "name": "plateau-triple-junction-120#assumed-2",
+        "statement": "Equal tension on all three walls. With unequal tensions the angles follow junction_inner (T3^2 = T1^2 + T2^2 + 2 T1 T2 cos angle) and are not 120 degrees."
+      }
+    ],
+    "scope": {
+      "taxa": [
+        "any"
+      ],
+      "life_stages": [],
+      "ranges": {},
+      "basis": "a theorem about a model of fluid walls under tension; it applies wherever the walls are such films and accepts the hypotheses in scope.assumed",
+      "kernelChecked": [
+        "Exact: T•u + T•v + T•w = 0 with unit u, v, w and T > 0 gives angle(u,v) = angle(v,w) = angle(u,w) = 2π/3 (tripleJunction_120).",
+        "General Neumann triangle: T3^2 = T1^2 + T2^2 + 2 T1 T2 <u,v> (junction_inner).",
+        "Non-vacuity: the unit vectors at 0, 120 and 240 degrees in the plane are balanced under equal tension (tripleJunction_120_witness)."
+      ],
+      "assumed": [
+        "Fluid walls of uniform tension in static equilibrium (force balance at the junction is the whole model).",
+        "Equal tension on all three walls."
+      ]
+    },
+    "shared_scope": null,
+    "evidence": {
+      "sources": [
+        "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-04; Lean port of ThompsonLaws.Cells.tripleJunction_120)",
+        "Plateau, Statique expérimentale et théorique des liquides soumis aux seules forces moléculaires (1873), first rule"
+      ],
+      "observations": [],
+      "faithfulness": "not assessed"
+    },
+    "sources": [
+      "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-04)",
+      "Plateau (1873), first rule"
+    ],
+    "non_vacuity_witness": {
+      "lean": "Delphi.CellGeometry.tripleJunction_120_witness",
+      "statement": "theorem tripleJunction_120_witness : ∃ u v w : EuclideanSpace ℝ (Fin 2), ‖u‖ = 1 ∧ ‖v‖ = 1 ∧ ‖w‖ = 1 ∧ junctionBalanced 1 1 1 u v w",
+      "file": "lean/Delphi/CellGeometry.lean"
+    },
+    "constraints": [],
+    "introduced_in": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "retired_reason": null,
+    "contested_with": [],
+    "approval": null,
+    "origin": {
+      "by_role": "lean-thread",
+      "kind": "agent",
+      "from": "port of Lean-checked Thompson claims (claim-sources/thompson-growth-form/lean/ThompsonLaws) into the registry, plus three new geometry laws, at the project lead's request (Nov 2)"
+    },
+    "history": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-03",
+        "change": "propose.mjs against lawset 1.6.0: candidate"
+      }
+    ],
+    "content_hash": "1f2ad08790f6385194b294ee6f8a627875b4a87e12927b7888cd33ab20a44d73"
+  },
+  "checked_at": "2026-11-03T02:04:15.416Z"
+}

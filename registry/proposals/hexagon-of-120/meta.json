@@ -1,0 +1,54 @@
+{
+  "law_id": "hexagon-of-120",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "label": "A straight-walled cell whose every corner is 120 degrees has six sides",
+  "level": "cell",
+  "statement_en": "A cell bounded by straight walls whose every corner is a 120-degree triple junction has exactly six sides, hence six neighbours. With fewer than six sides the corners must on average be sharper than 120 degrees, with more than six they must be blunter.",
+  "lean": {
+    "theorem": "Delphi.CellGeometry.hexagon_of_120",
+    "witness": "Delphi.CellGeometry.hexagon_of_120_witness"
+  },
+  "hypotheses": [
+    {
+      "name": "hexagon-of-120#assumed-1",
+      "statement": "A single convex polygon with straight sides, whose interior angles sum to (n - 2)π. Curved walls between unequal cells are outside the statement."
+    },
+    {
+      "name": "hexagon-of-120#assumed-2",
+      "statement": "Every corner is exactly 120 degrees (the equal-tension junction of plateau-triple-junction-120); the inequalities concern the mean corner angle only."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "Euclidean plane geometry of one straight-sided cell; applies wherever the hypotheses in scope.assumed hold",
+    "kernelChecked": [
+      "Exact: (n - 2)π = n · 2π/3 iff n = 6; n < 6 implies (n - 2)π < n · 2π/3; 6 < n implies the reverse (hexagon_of_120).",
+      "Non-vacuity: the regular hexagon (hexagon_of_120_witness)."
+    ],
+    "assumed": [
+      "A single convex straight-sided polygon.",
+      "Corners of exactly 120 degrees for the equality; mean corner angle for the inequalities."
+    ]
+  },
+  "evidence": {
+    "sources": [
+      "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-09; Lean port of ThompsonLaws.Cells.hexagon_of_120)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-09)"
+  ],
+  "origin": {
+    "by_role": "lean-thread",
+    "kind": "agent",
+    "from": "port of Lean-checked Thompson claims (claim-sources/thompson-growth-form/lean/ThompsonLaws) into the registry, plus three new geometry laws, at the project lead's request (Nov 2)"
+  }
+}

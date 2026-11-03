@@ -1,0 +1,175 @@
+{
+  "law_id": "hexagon-of-120",
+  "status": "candidate",
+  "lawset": "1.6.0",
+  "steps": {
+    "forbidden": {
+      "ok": true,
+      "found": []
+    },
+    "build": {
+      "ok": true,
+      "output": "'Delphi.CellGeometry.hexagon_of_120' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Delphi.CellGeometry.hexagon_of_120_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "axioms": {
+      "ok": true,
+      "printed": {
+        "Delphi.CellGeometry.hexagon_of_120": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delphi.CellGeometry.hexagon_of_120_witness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "witness": {
+      "ok": true,
+      "name": "Delphi.CellGeometry.hexagon_of_120_witness",
+      "statement": "theorem hexagon_of_120_witness : polygonAngleSum 6 = 6 * (2 * π / 3)",
+      "via": "names the declaration"
+    },
+    "joint": {
+      "ok": true,
+      "lawset": "1.6.0",
+      "peers": [],
+      "outcome": "theorem from standard axioms with no shared-scope hypotheses: consistent with every satisfiable law set"
+    },
+    "bridge": {
+      "ok": true,
+      "note": "no structure"
+    },
+    "mutants": {
+      "ok": true,
+      "results": [
+        {
+          "at": 6783,
+          "line": 129,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 6807,
+          "line": 129,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 6837,
+          "line": 130,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 6865,
+          "line": 130,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 6745,
+          "line": 128,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 6767,
+          "line": 128,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "reasons": [],
+  "law": {
+    "law_id": "hexagon-of-120",
+    "version": "1.0.0",
+    "kind": "physical",
+    "class": "theorem",
+    "status": "candidate",
+    "label": "A straight-walled cell whose every corner is 120 degrees has six sides",
+    "level": "cell",
+    "lean_ref": {
+      "module": "lean/Delphi/CellGeometry.lean",
+      "theorem": "Delphi.CellGeometry.hexagon_of_120",
+      "structure": null,
+      "commit": "da554e15b23e3d5b54ed63e05ef09bc96d365458",
+      "statement_sha256": "4e6bda9c06282afa3586090c99b445b3a38d0fac5c75f188bc8d5659d0827969",
+      "content_hash": "39610e765cb5ef95ea6853b5339b18cb9fb79efc9cc100fc059fc72132b3597e"
+    },
+    "statement_en": "A cell bounded by straight walls whose every corner is a 120-degree triple junction has exactly six sides, hence six neighbours. With fewer than six sides the corners must on average be sharper than 120 degrees, with more than six they must be blunter.",
+    "hypotheses": [
+      {
+        "name": "hexagon-of-120#assumed-1",
+        "statement": "A single convex polygon with straight sides, whose interior angles sum to (n - 2)π. Curved walls between unequal cells are outside the statement."
+      },
+      {
+        "name": "hexagon-of-120#assumed-2",
+        "statement": "Every corner is exactly 120 degrees (the equal-tension junction of plateau-triple-junction-120); the inequalities concern the mean corner angle only."
+      }
+    ],
+    "scope": {
+      "taxa": [
+        "any"
+      ],
+      "life_stages": [],
+      "ranges": {},
+      "basis": "Euclidean plane geometry of one straight-sided cell; applies wherever the hypotheses in scope.assumed hold",
+      "kernelChecked": [
+        "Exact: (n - 2)π = n · 2π/3 iff n = 6; n < 6 implies (n - 2)π < n · 2π/3; 6 < n implies the reverse (hexagon_of_120).",
+        "Non-vacuity: the regular hexagon (hexagon_of_120_witness)."
+      ],
+      "assumed": [
+        "A single convex straight-sided polygon.",
+        "Corners of exactly 120 degrees for the equality; mean corner angle for the inequalities."
+      ]
+    },
+    "shared_scope": null,
+    "evidence": {
+      "sources": [
+        "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-09; Lean port of ThompsonLaws.Cells.hexagon_of_120)"
+      ],
+      "observations": [],
+      "faithfulness": "not assessed"
+    },
+    "sources": [
+      "On Growth and Form (1917), chapter VII (claim thompson1917-ch07-09)"
+    ],
+    "non_vacuity_witness": {
+      "lean": "Delphi.CellGeometry.hexagon_of_120_witness",
+      "statement": "theorem hexagon_of_120_witness : polygonAngleSum 6 = 6 * (2 * π / 3)",
+      "file": "lean/Delphi/CellGeometry.lean"
+    },
+    "constraints": [],
+    "introduced_in": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "retired_reason": null,
+    "contested_with": [],
+    "approval": null,
+    "origin": {
+      "by_role": "lean-thread",
+      "kind": "agent",
+      "from": "port of Lean-checked Thompson claims (claim-sources/thompson-growth-form/lean/ThompsonLaws) into the registry, plus three new geometry laws, at the project lead's request (Nov 2)"
+    },
+    "history": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-03",
+        "change": "propose.mjs against lawset 1.6.0: candidate"
+      }
+    ],
+    "content_hash": "39610e765cb5ef95ea6853b5339b18cb9fb79efc9cc100fc059fc72132b3597e"
+  },
+  "checked_at": "2026-11-03T02:07:39.251Z"
+}
