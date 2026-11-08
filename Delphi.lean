@@ -6,5 +6,6 @@ import Delphi.Blueprint
 import Delphi.Thompson
 import Delphi.Turing
 import Delphi.CellGeometry
+import Delphi.Crystals
 import Delphi.Certificates.AFlyingFish
 import Delphi.Constraints

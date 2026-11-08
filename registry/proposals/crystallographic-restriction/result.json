@@ -1,0 +1,179 @@
+{
+  "law_id": "crystallographic-restriction",
+  "status": "candidate",
+  "lawset": "1.6.0",
+  "steps": {
+    "forbidden": {
+      "ok": true,
+      "found": []
+    },
+    "build": {
+      "ok": true,
+      "output": "'Delphi.Crystals.crystallographic_restriction' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Delphi.Crystals.crystallographic_restriction_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "axioms": {
+      "ok": true,
+      "printed": {
+        "Delphi.Crystals.crystallographic_restriction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delphi.Crystals.crystallographic_restriction_witness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "witness": {
+      "ok": true,
+      "name": "Delphi.Crystals.crystallographic_restriction_witness",
+      "statement": "theorem crystallographic_restriction_witness : ∃ n : ℕ, 0 < n ∧ IsLatticeRotation (2 * π / n)",
+      "via": "names the declaration"
+    },
+    "joint": {
+      "ok": true,
+      "lawset": "1.6.0",
+      "peers": [],
+      "outcome": "theorem from standard axioms with no shared-scope hypotheses: consistent with every satisfiable law set"
+    },
+    "bridge": {
+      "ok": true,
+      "note": "no structure"
+    },
+    "mutants": {
+      "ok": true,
+      "results": [
+        {
+          "at": 4183,
+          "line": 94,
+          "from": "<",
+          "to": "≥",
+          "rejected": true
+        },
+        {
+          "at": 4232,
+          "line": 95,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4240,
+          "line": 95,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4248,
+          "line": 95,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4256,
+          "line": 95,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        },
+        {
+          "at": 4264,
+          "line": 95,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "reasons": [],
+  "law": {
+    "law_id": "crystallographic-restriction",
+    "version": "1.0.0",
+    "kind": "physical",
+    "class": "theorem",
+    "status": "candidate",
+    "label": "The crystallographic restriction: a lattice has only 1-, 2-, 3-, 4- or 6-fold rotation axes",
+    "level": "molecular",
+    "lean_ref": {
+      "module": "lean/Delphi/Crystals.lean",
+      "theorem": "Delphi.Crystals.crystallographic_restriction",
+      "structure": null,
+      "commit": "ffdc528e4f95299e358f16c4b19587746afe8a68",
+      "statement_sha256": "18f06f55b70de98e752c00e11ec091cbc42480c40d951ce20383bfce670be500",
+      "content_hash": "75a23d349e03ca40488a454b5bafaffcde40520f85958ced0d9a6b1527108283"
+    },
+    "statement_en": "A rotation that carries a plane lattice onto itself has an integer matrix in a lattice basis, so its trace 2 cos θ is an integer; for a rotation of order n (θ = 2π/n) this forces n to be 1, 2, 3, 4 or 6. No lattice has a five-fold axis or one of order seven or more. Stated for plane lattices; a three-dimensional axis restricts to the plane normal to it.",
+    "hypotheses": [
+      {
+        "name": "crystallographic-restriction#assumed-1",
+        "statement": "The symmetry is a rotation of a lattice: there is a basis of the lattice (an invertible real matrix P) in which the rotation's matrix has integer entries. This is what it means for a rotation to map the lattice to itself; the theorem does not say which structures are lattices."
+      },
+      {
+        "name": "crystallographic-restriction#assumed-2",
+        "statement": "The rotation has finite order n ≥ 1, i.e. its angle is 2π/n."
+      }
+    ],
+    "scope": {
+      "taxa": [
+        "any"
+      ],
+      "life_stages": [],
+      "ranges": {},
+      "basis": "a theorem about periodic lattices; it says nothing about aperiodic order (quasicrystals have five-fold diffraction symmetry and no lattice) or about which organisms build lattice-like skeletons",
+      "kernelChecked": [
+        "Exact: IsLatticeRotation (2π/n) with 0 < n gives n = 1 ∨ n = 2 ∨ n = 3 ∨ n = 4 ∨ n = 6 (crystallographic_restriction).",
+        "Arithmetic core: 2 cos (2π/n) ∈ ℤ only for n ∈ {1, 2, 3, 4, 6} (two_cos_two_pi_div_int).",
+        "Trace of a lattice rotation is an integer, via conjugation invariance of the trace (IsLatticeRotation.trace_int).",
+        "Non-vacuity: the four-fold rotation of the square lattice is a lattice rotation (fourfold_is_lattice_rotation, crystallographic_restriction_witness)."
+      ],
+      "assumed": [
+        "The symmetry maps a lattice to itself (integer matrix in some lattice basis).",
+        "Finite order n ≥ 1."
+      ]
+    },
+    "shared_scope": null,
+    "evidence": {
+      "sources": [
+        "Bravais, Mémoire sur les systèmes formés par des points distribués régulièrement sur un plan ou dans l'espace (1850); claim bravais1850-01 in claim-sources/crystals-and-form/claims.json",
+        "Lean port of ThompsonLaws.Crystals.crystallographic_restriction (claim-sources/thompson-growth-form/lean/ThompsonLaws/Crystals.lean)"
+      ],
+      "observations": [],
+      "faithfulness": "not assessed"
+    },
+    "sources": [
+      "Bravais (1850), claim bravais1850-01",
+      "Thompson, On Growth and Form (1917), ch. IX: regular dodecahedral and icosahedral radiolaria take the restriction as a premise (claim thompson1917-ch09-17, skos:related)"
+    ],
+    "non_vacuity_witness": {
+      "lean": "Delphi.Crystals.crystallographic_restriction_witness",
+      "statement": "theorem crystallographic_restriction_witness : ∃ n : ℕ, 0 < n ∧ IsLatticeRotation (2 * π / n)",
+      "file": "lean/Delphi/Crystals.lean"
+    },
+    "constraints": [],
+    "introduced_in": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "retired_reason": null,
+    "contested_with": [],
+    "approval": null,
+    "origin": {
+      "by_role": "crystals-film-thread",
+      "kind": "agent",
+      "from": "port of the Lean-checked crystal claims (claim-sources/thompson-growth-form/lean/ThompsonLaws/Crystals.lean) into the registry while building the crystals film (Nov 7)"
+    },
+    "history": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-08",
+        "change": "propose.mjs against lawset 1.6.0: candidate"
+      }
+    ],
+    "content_hash": "75a23d349e03ca40488a454b5bafaffcde40520f85958ced0d9a6b1527108283"
+  },
+  "checked_at": "2026-11-08T00:34:15.046Z"
+}

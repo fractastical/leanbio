@@ -1,0 +1,83 @@
+{
+  "law_id": "bragg-cubic-ratio",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "status": "candidate",
+  "label": "Bragg's law on a cubic lattice: the (100), (110), (111) glancing angles have sines in the ratio 1 : √2 : √3",
+  "level": "molecular",
+  "lean_ref": {
+    "module": "lean/Delphi/Crystals.lean",
+    "theorem": "Delphi.Crystals.bragg_ratio",
+    "structure": null,
+    "commit": "ffdc528e4f95299e358f16c4b19587746afe8a68",
+    "statement_sha256": "2668c8d92bf2ce09d018b69c82a5be24a735c4ffa21c723da5cf6cf2fe07a37e",
+    "content_hash": "0963fdfbccf35a513858c8451f980e3ce4858fb6dd3eb7830c3534cc244b302e"
+  },
+  "statement_en": "Bragg's condition for a reflection of order n is n λ = 2 d sin θ. In a cubic lattice of edge a the (hkl) planes are a/√(h²+k²+l²) apart, so for one order and one wavelength the sines of the glancing angles from the (100), (110) and (111) planes stand as 1 : √2 : √3. This ratio is what W. L. Bragg measured in 1913 to tell the face-centred from the simple cubic arrangement.",
+  "hypotheses": [
+    {
+      "name": "bragg-cubic-ratio#assumed-1",
+      "statement": "Each reflection satisfies Bragg's condition n λ = 2 d sin θ with the plane spacing d of a cubic lattice of edge a > 0 (d = a/√(h²+k²+l²)). The condition itself (Bragg 1913) is taken as the model of reflection; the theorem does not derive it from wave optics."
+    },
+    {
+      "name": "bragg-cubic-ratio#assumed-2",
+      "statement": "The same order n and wavelength λ for the three reflections."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "a theorem about Bragg's condition on an ideal cubic lattice; the measured spacings of rock salt and calcite are separate data tests (bragg1915-01, bragg1915-06)",
+    "kernelChecked": [
+      "Exact: with BraggReflects n λ (dSpacing a h k l) θ, sin θ = n λ √(h²+k²+l²) / (2a) (sin_of_bragg).",
+      "Exact: sin θ₁₁₀ = √2 sin θ₁₀₀ and sin θ₁₁₁ = √3 sin θ₁₀₀ (bragg_ratio).",
+      "Non-vacuity: a = 1, n = 1, λ = 2, θ = π/2 on (100) satisfies the condition (bragg_ratio_witness)."
+    ],
+    "assumed": [
+      "Bragg's condition n λ = 2 d sin θ as the model of reflection.",
+      "Cubic lattice of edge a > 0; same order and wavelength across the three reflections."
+    ]
+  },
+  "shared_scope": null,
+  "evidence": {
+    "sources": [
+      "W. L. Bragg, The diffraction of short electromagnetic waves by a crystal, Proc. Cambridge Phil. Soc. 17 (1913); claim bragg1913s-01 in claim-sources/crystals-and-form/claims.json",
+      "Lean port of ThompsonLaws.Crystals.bragg_ratio (claim-sources/thompson-growth-form/lean/ThompsonLaws/Crystals.lean)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "Bragg (1913), claim bragg1913s-01",
+    "Bragg and Bragg, X Rays and Crystal Structure (1915), claims bragg1915-01 and bragg1915-06 (measured spacings, tested against the COD)"
+  ],
+  "non_vacuity_witness": {
+    "lean": "Delphi.Crystals.bragg_ratio_witness",
+    "statement": "theorem bragg_ratio_witness : ∃ (a lam θ : ℝ) (n : ℕ), 0 < a ∧ BraggReflects n lam (dSpacing a 1 0 0) θ",
+    "file": "lean/Delphi/Crystals.lean"
+  },
+  "constraints": [],
+  "introduced_in": null,
+  "supersedes": null,
+  "superseded_by": null,
+  "retired_reason": null,
+  "contested_with": [],
+  "approval": null,
+  "origin": {
+    "by_role": "crystals-film-thread",
+    "kind": "agent",
+    "from": "port of the Lean-checked crystal claims (claim-sources/thompson-growth-form/lean/ThompsonLaws/Crystals.lean) into the registry while building the crystals film (Nov 7)"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-08",
+      "change": "propose.mjs against lawset 1.6.0: candidate"
+    }
+  ],
+  "content_hash": "0963fdfbccf35a513858c8451f980e3ce4858fb6dd3eb7830c3534cc244b302e"
+}

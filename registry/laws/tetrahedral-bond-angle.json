@@ -1,0 +1,81 @@
+{
+  "law_id": "tetrahedral-bond-angle",
+  "version": "1.0.0",
+  "kind": "physical",
+  "class": "theorem",
+  "status": "candidate",
+  "label": "The tetrahedral angle: any two bonds of the diamond lattice meet with cosine exactly -1/3",
+  "level": "molecular",
+  "lean_ref": {
+    "module": "lean/Delphi/Crystals.lean",
+    "theorem": "Delphi.Crystals.tetrahedral_cos",
+    "structure": null,
+    "commit": "ffdc528e4f95299e358f16c4b19587746afe8a68",
+    "statement_sha256": "f3f5bbe31ef7021a337b607d66e94007032f22f8332c64e816a5d273d9ba9505",
+    "content_hash": "1b1200b3961aa7ea39fdfa74555c71169a53cc0bec0a1b43beb5f1946a612daf"
+  },
+  "statement_en": "In the diamond lattice each atom's four neighbours lie along (a/4)(±1, ±1, ±1) with an even number of minus signs. For any cube edge a > 0 and any two distinct bonds the cosine of the angle between them is exactly -1/3, so the bond angle is arccos(-1/3) ≈ 109.47°, independent of a; it lies strictly between 90° and the 120° of three coplanar rays.",
+  "hypotheses": [
+    {
+      "name": "tetrahedral-bond-angle#assumed-1",
+      "statement": "The bonds are the four diamond-lattice directions (a/4)(±1, ±1, ±1) with an even number of minus signs, for a cube edge a > 0. Whether a given crystal, or a four-rayed sponge spicule, has bonds or rays in these directions is an empirical question the theorem does not touch."
+    }
+  ],
+  "scope": {
+    "taxa": [
+      "any"
+    ],
+    "life_stages": [],
+    "ranges": {},
+    "basis": "a theorem about the ideal diamond lattice; Thompson's claim that four-rayed calcareous spicules make the same angle (thompson1917-ch09-10) is a separate, pre-registered and still blocked data test",
+    "kernelChecked": [
+      "Exact: for a > 0 and i ≠ j, cosAngle (bond a i) (bond a j) = -1/3 (tetrahedral_cos).",
+      "Every bond has squared length 3a²/16 (bond_sq); any two distinct bonds have dot product -a²/16 (bond_dot).",
+      "π/2 < arccos(-1/3) < 2π/3 (tetrahedral_angle_bounds).",
+      "Non-vacuity: a = 1 with bonds 0 and 1 (tetrahedral_cos_witness)."
+    ],
+    "assumed": [
+      "Bond directions are the diamond-lattice directions; cube edge a > 0."
+    ]
+  },
+  "shared_scope": null,
+  "evidence": {
+    "sources": [
+      "W. H. Bragg and W. L. Bragg, X Rays and Crystal Structure (1915), diamond; claim bragg1915-03 in claim-sources/crystals-and-form/claims.json",
+      "Data test test-data/claim-tests/crystals-and-form/bragg1915-03/result.json: COD refined diamond cell, all bond angles equal to arccos(-1/3) within numerical error",
+      "Lean port of ThompsonLaws.Crystals.tetrahedral_cos (claim-sources/thompson-growth-form/lean/ThompsonLaws/Crystals.lean)"
+    ],
+    "observations": [],
+    "faithfulness": "not assessed"
+  },
+  "sources": [
+    "Bragg and Bragg (1915), claim bragg1915-03",
+    "Registry law plateau-tetrahedral-angle reaches the same constant arccos(-1/3) from a different hypothesis (four equal-tension fluid walls in balance); the two are distinct laws that share a value, not one law",
+    "Thompson, On Growth and Form (1917), ch. IX, claim thompson1917-ch09-10 (same-quantity link, skos:related)"
+  ],
+  "non_vacuity_witness": {
+    "lean": "Delphi.Crystals.tetrahedral_cos_witness",
+    "statement": "theorem tetrahedral_cos_witness : ∃ a : ℝ, 0 < a ∧ cosAngle (bond a 0) (bond a 1) = -1 / 3",
+    "file": "lean/Delphi/Crystals.lean"
+  },
+  "constraints": [],
+  "introduced_in": null,
+  "supersedes": null,
+  "superseded_by": null,
+  "retired_reason": null,
+  "contested_with": [],
+  "approval": null,
+  "origin": {
+    "by_role": "crystals-film-thread",
+    "kind": "agent",
+    "from": "port of the Lean-checked crystal claims (claim-sources/thompson-growth-form/lean/ThompsonLaws/Crystals.lean) into the registry while building the crystals film (Nov 7)"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-08",
+      "change": "propose.mjs against lawset 1.6.0: candidate"
+    }
+  ],
+  "content_hash": "1b1200b3961aa7ea39fdfa74555c71169a53cc0bec0a1b43beb5f1946a612daf"
+}
