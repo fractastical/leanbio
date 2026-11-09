@@ -162,6 +162,17 @@ else {
   if (d.length) fail('stale:mirror', `${d.length} files`, `static mirror is stale relative to the sources: ${d.slice(0, 6).map(x => `${x.file} (${x.why})`).join(', ')}${d.length > 6 ? ', ...' : ''}`, 'node dashboard/build-lean-api.mjs');
 }
 
+// ── (c2) the public laws page docs/laws/ (scripts/site/build-law-graph.mjs) ───
+// Same rule as the mirror: every law is a node there, and the page was built from the current sources.
+if (!has('docs/laws/graph.json')) fail('c2:laws-page', 'graph.json', 'docs/laws/graph.json does not exist', 'node scripts/site/build-law-graph.mjs');
+else {
+  const g = readJson('docs/laws/graph.json');
+  const inPage = new Set((g.laws || []).map(l => l.law_id));
+  for (const id of ids) if (!inPage.has(id)) fail('c2:laws-page', id, `${id} missing from docs/laws/graph.json`, 'node scripts/site/build-law-graph.mjs');
+  if (g.source_fingerprint !== src.sourceFingerprint().hash) fail('stale:laws-page', 'graph.json', 'docs/laws/graph.json was built from different Lean sources than the current tree', 'node scripts/site/build-law-graph.mjs');
+  if (!has('docs/laws/index.html')) fail('c2:laws-page', 'index.html', 'docs/laws/index.html does not exist', 'node scripts/site/build-law-graph.mjs');
+}
+
 // ── (d) CLIs ─────────────────────────────────────────────────────────────────
 const cli = await imp('sim-engine/lean-cli.mjs');
 for (const id of ids) {

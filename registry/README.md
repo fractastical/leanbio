@@ -10,7 +10,7 @@ and its history, never removes its file.
 | path | what |
 |---|---|
 | `lean/registry/laws-registry.schema.json` | JSON Schema (draft 2020-12) for one law file |
-| `lean/registry/laws/<law_id>.json` | one file per law, at its CURRENT version (schema above) |
+| `lean/registry/laws/<law_id>.json` | one file per law, at its CURRENT version (schema above). Optional `claims: [<claim id>, ...]` names the Delphi claims the law formalizes; it is outside the content hash, so adding it never re-pins a lawset, and the public laws page (`docs/laws/`, `scripts/site/build-law-graph.mjs`) uses it to join the law to those claims' tests and images |
 | `lean/registry/law-versions/<law_id>@<version>.json` | every superseded version of a law, kept so older law sets stay reproducible (`loadLawVersion(id, version)` in registry-lib.mjs) |
 | `lean/registry/lawsets/lawset-<semver>.json` | a law-set release: `{version, created, previous, laws:[{law_id, version, content_hash, status, kind}]}` |
 | `lean/registry/lawsets/current.json` | `{version, file}`: the current law set |

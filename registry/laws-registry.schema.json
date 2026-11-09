@@ -13,6 +13,7 @@
     "status": { "enum": ["proposed", "candidate", "accepted", "contested", "retired"] },
     "label": { "type": "string", "minLength": 1 },
     "level": { "type": ["string", "null"] },
+    "claims": { "type": "array", "items": { "type": "string" }, "description": "Optional. Ids of the Delphi claims (docs/claims.json) this law formalizes. Not part of the content hash, so adding one never re-pins a lawset. docs/laws/ (scripts/site/build-law-graph.mjs) joins the law to these claims' data tests and images as route `declared`; without it the join falls back to same-id, the LeanBio pipeline's links and claim ids found in the prose." },
     "lean_ref": {
       "type": "object",
       "required": ["module", "theorem", "commit", "statement_sha256", "content_hash"],
