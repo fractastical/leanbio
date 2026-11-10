@@ -8,8 +8,10 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 export const REG = path.dirname(fileURLToPath(import.meta.url));
-export const LEAN = path.resolve(REG, '..');
 export const ROOT = path.resolve(REG, '../..');
+// The Lake package root: the repo root in leanbio (lakefile.toml with srcDir = "lean"), lean/ when this
+// folder is vendored inside the Delphi application repo. Module paths in law files are always ROOT-relative.
+export const LEAN = fs.existsSync(path.join(ROOT, 'lakefile.toml')) ? ROOT : path.resolve(REG, '..');
 export const LAWS_DIR = path.join(REG, 'laws');
 export const LAWSETS_DIR = path.join(REG, 'lawsets');
 export const STANDARD_AXIOMS = ['propext', 'Classical.choice', 'Quot.sound'];

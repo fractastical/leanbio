@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Flight at altitude: the joint wing-oxygen constraint
 
 Hub part B. Air gets thinner with height, so a wing of fixed area needs a higher speed to carry the same

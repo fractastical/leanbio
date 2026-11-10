@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Allometry, climb, glide range and the aerobic power bound
 
 Fills the gaps the flying-fish audit (`lean/AUDIT-FLYING-FISH.md`) and the physics thread's coupled simulator

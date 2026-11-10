@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this library, please cite it as below."
+authors:
+- family-names: "Dietz"
+  given-names: "Joel"
+- family-names: "Shenoy"
+  given-names: "Amit"
+title: "LeanBio: candidate laws of biology, machine-checked in Lean 4"
+date-released: 2026-11-09
+url: "https://github.com/fractastical/leanbio"
+license: Apache-2.0

@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Two physiological laws the chain already uses: Q10 and Laplace
 
 * **Q10.** `q10Scale X0 Q10 Tref T = X0 Q10^((T - Tref)/10)`: the ratio between two temperatures is

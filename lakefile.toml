@@ -1,0 +1,16 @@
+name = "leanbio"
+version = "0.1.0"
+defaultTargets = ["Delphi"]
+
+# Same toolchain and Mathlib pin as Physlib (leanprover-community/physlib), so results can move
+# between the two libraries without a port.
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0"
+
+# The library keeps its historical module namespace `Delphi` (lean/Delphi/*.lean): the law registry pins
+# every theorem by its module path and statement hash, so renaming modules would re-pin every law set.
+[[lean_lib]]
+name = "Delphi"
+srcDir = "lean"

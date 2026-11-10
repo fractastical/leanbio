@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # perturb-depth-cap contested by an observation (registry record observations/jamieson2023b-pseudoliparis-8336m.json)
 
 A teleost (Pseudoliparis sp. indet. 1, Liparidae) was recorded at 8336 m in the Izu-Ogasawara Trench

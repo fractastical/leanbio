@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # The formalised theorems as constraints a candidate can be checked against
 
 A Lean theorem does not settle an open problem; an open problem is open because no known theorem

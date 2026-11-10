@@ -1,0 +1,21 @@
+name: build
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          use-mathlib-cache: true
+          build: true
+          test: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Registry tests (law files, content hashes, statement pins)
+        run: REGISTRY_TEST_FAST=1 node lean/registry/test.mjs

@@ -73,7 +73,9 @@ const approvalErrs = ls => releaseProblems(ls).filter(p => /approv|role/.test(p)
 check('approval: accepted laws carry approved_by_role (a role, not a person)', () => approvalErrs(laws),
   () => { const b = clone(laws.filter(l => l.status === 'candidate')).slice(0, 2); b[0].status = 'accepted'; b[1].status = 'accepted'; b[1].approval = { approved_by_role: 'Jane Doe', date: 'x', basis: 'x' }; return approvalErrs(b); });
 
-// 6. browser-check: law-set aware, scope gives 'out-of-scope', no accepted law red on an unedited wild type
+// 6. browser-check (Delphi application only): the generated checker and the anatomy models live in the Delphi repo,
+// not in LeanBio. Skipped when they are absent.
+if (fs.existsSync(path.join(ROOT, 'lean/eliminate/browser-check.mjs')) && fs.existsSync(path.join(ROOT, 'anatomy-model/parametric/resolved'))) {
 async function loadChecker() {
   const real = path.join(ROOT, 'lean/eliminate/browser-check.mjs');
   const m = await import(pathToFileURL(real).href + '?t=' + Date.now());
@@ -117,6 +119,8 @@ const judgeAs = (status, opts = {}) => { const ls = clone(BC.LAWSETS[BC.LAWSET_V
 check(`status: accepted red, candidate not red (flagged), candidate red with includeCandidates, contested amber, retired not judged (law ${lid}, constraint ${cid})`,
   () => [judgeAs('accepted').display === 'red' || 'accepted', judgeAs('candidate').verdict === 'candidate-violated' || 'candidate', judgeAs('candidate', { includeCandidates: true }).display === 'red' || 'candidate+include', judgeAs('contested').display === 'amber' || 'contested', judgeAs('retired').verdict === 'not-in-lawset' || 'retired'].filter(x => x !== true),
   () => [judgeAs('contested').display === 'red' || 'contested is not red'].filter(x => x !== true));
+
+} else console.log('     (skipped browser-check section: Delphi application files not present)');
 
 // 7 and 8. proposals through Lean: a contradictory law is contested; a sorry is rejected
 if (!process.env.REGISTRY_TEST_FAST) {

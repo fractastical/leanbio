@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Well-formedness of an anatomical blueprint graph
 
 The organism thread's tool (`organism-design/blueprint.mjs`) emits, for a text description, a finite

@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz
+-/
+/-
 # Turing (1952): the linear condition for diffusion-driven instability
 
 Claim `turing-ddi` in `claim-sources/math-bio-claims/claims/key-claims.json`:

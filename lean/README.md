@@ -1,5 +1,9 @@
 # Lean 4 formalization of candidate laws of biology
 
+> Build from the repo root (`lake build`), not from this folder: the Lake package is at the root with
+> `srcDir = "lean"`. The table below is the original module list and is incomplete; the registry
+> (`registry/laws/`) is the authoritative index.
+
 This folder is a [Lake](https://github.com/leanprover/lean4/tree/master/src/lake) project that
 machine-checks theorems from `math-bio-theorems/claims/key-claims.json`, following the
 formal-verification convention in `BEST_PRACTICES.md` section 9: the Lean statement must encode

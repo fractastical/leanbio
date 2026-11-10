@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Registry non-vacuity witnesses and shared-scope bridges
 
 Compiled by lean/registry/build-registry.mjs and lean/registry/test.mjs with `lake env lean` (not part of the

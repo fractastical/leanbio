@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Genotype-level checks: the genetic code, developmental ordering, pleiotropy closure, substitution time
 
 Decidable checks the Design Studio's genetic edits need (hub direction A, 2026-10-31), each small and each a

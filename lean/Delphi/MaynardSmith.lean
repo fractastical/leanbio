@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Maynard Smith (1978): the twofold cost of sex
 
 Claim `maynardsmith-twofold-cost` in `math-bio-theorems/claims/key-claims.json`:

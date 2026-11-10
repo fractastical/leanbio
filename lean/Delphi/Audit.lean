@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 Axiom audit. `#print axioms` lists every axiom a theorem depends on. Mathlib proofs use only
 Lean's three standard axioms (`propext`, `Classical.choice`, `Quot.sound`). A `sorry` would
 show up here as `sorryAx`. `lean/report.mjs` runs this file and records the output.

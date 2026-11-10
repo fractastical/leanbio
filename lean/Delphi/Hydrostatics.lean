@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Hydrostatic pressure from ρ and g, and Boyle's law for a closed swim bladder (perturb-pressure v2.0.0)
 
 Version 2.0.0 of the registry law `perturb-pressure`. Version 1.0.0 (lean/Delphi/Perturb.lean,

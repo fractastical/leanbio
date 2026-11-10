@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Scaling laws of an isometric family: area, wing loading, strength, minimum speed, power (R2–R8)
 
 Formalises the statements the physics thread handed over in `physics/FORMAL-STATEMENTS.md` (2026-10-31),

@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Perturbation laws for the Design Studio: temperature, current, pressure, altitude and wind, daily energy
 
 The Design Studio optimises a design under perturbations at each developmental stage and rejects a candidate that

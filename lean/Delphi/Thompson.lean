@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Thompson (1917): weight varies as the cube of a linear dimension
 
 Claim `thompson1917-ch03-07` (On Growth and Form, chapter III): during growth, weight tends to vary

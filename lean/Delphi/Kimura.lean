@@ -1,4 +1,9 @@
 /-
+Copyright (c) 2026 Joel Dietz, Amit Shenoy. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Joel Dietz, Amit Shenoy
+-/
+/-
 # Kimura (1968): the neutral substitution rate equals the mutation rate
 
 Claim `kimura-substitution-rate` in `math-bio-theorems/claims/key-claims.json`:
