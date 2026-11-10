@@ -113,9 +113,13 @@ The current list, with the claims, data tests and images each law is joined to, 
 
 Not yet moved here: the Lean projects attached to individual source works in the Delphi repo
 (`ThompsonLaws`, `DarwinLaws`, `WolframLaws`, the hygromorph mechanics) and the `Patterns`
-generators. Several accepted laws are physics rather than biology (Boyle, Fick, Bragg, the
-crystallographic restriction, Plateau's rules); where Physlib has them, LeanBio should depend on
-Physlib instead of restating them. That check has not been done yet.
+generators. Five of the laws are physics (Boyle, Fick, Bragg, the crystallographic restriction,
+Plateau's rules). Checked against Physlib `31a3730` on 10 November 2026: Physlib has none of them,
+so LeanBio still states them. Boyle is the nearest miss. Physlib proves `P V = n R T` and notes that
+Boyle follows, without proving it, while LeanBio takes `P V` constant as a hypothesis of the
+swim-bladder theorem rather than proving it. The search and the per-law result are in
+[docs/physlib-overlap.md](docs/physlib-overlap.md). When Physlib ships one of the five, LeanBio
+should depend on it instead of restating it.
 
 ## License
 
