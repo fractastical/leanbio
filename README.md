@@ -1,5 +1,7 @@
 # LeanBio
 
+<img src="logo.svg" alt="LeanBio" width="520">
+
 Candidate laws of biology, stated as theorems with their assumptions as explicit hypotheses and
 machine-checked in Lean 4 against Mathlib. A proof here shows that a statement follows from a named
 model; whether organisms satisfy the model is an empirical question, answered elsewhere by data tests.
