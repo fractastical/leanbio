@@ -1,14 +1,72 @@
-# LeanBio
-
+<div align="center">
 <img src="logo.svg" alt="LeanBio" width="520">
+</div>
 
-Candidate laws of biology, stated as theorems with their assumptions as explicit hypotheses and
-machine-checked in Lean 4 against Mathlib. A proof here shows that a statement follows from a named
-model; whether organisms satisfy the model is an empirical question, answered elsewhere by data tests.
+<div align="center">
 
-LeanBio is the library behind [Delphi](https://delphibio.org/laws/). It follows the conventions of
-[Physlib](https://github.com/leanprover-community/physlib), the Lean physics library, and shares its
-toolchain and Mathlib pin (`v4.35.0`), so a result can move between the two without a port.
+## Candidate laws of biology, machine-checked in Lean 4
+
+[![](https://img.shields.io/badge/The-Laws-darkgreen)](https://delphibio.org/laws/)
+[![](https://img.shields.io/badge/Delphi-delphibio.org-darkgreen)](https://delphibio.org)
+[![](https://img.shields.io/badge/How_To-Contribute-darkgreen)](CONTRIBUTING.md)
+[![](https://img.shields.io/badge/License-Apache_2.0-darkgreen)](LICENSE)
+
+[![](https://img.shields.io/badge/Lean-v4.35.0-blue)](https://github.com/leanprover/lean4/releases/tag/v4.35.0)
+[![](https://img.shields.io/badge/Law_set-1.6.0-blue)](lean/registry/lawsets/current.json)
+[![build](https://github.com/fractastical/leanbio/actions/workflows/build.yml/badge.svg)](https://github.com/fractastical/leanbio/actions/workflows/build.yml)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/fractastical/leanbio)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fractastical/leanbio)
+
+</div>
+
+<table>
+<tr>
+<td colspan="3" align="center">
+
+<sub><b>UPSTREAM</b></sub> · [**Mathlib**](https://github.com/leanprover-community/mathlib4) ↑
+
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center">
+
+<sub><b>THIS REPOSITORY</b></sub>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+### [**Delphi**](lean/Delphi)
+
+The Lean modules. Each file's header says which assumptions are inside the kernel and which are left outside; read it before citing a theorem.
+
+</td>
+<td width="33%" valign="top">
+
+### [**Certificates**](lean/Delphi/Certificates)
+
+Elimination certificates, theorems of the form `*_rules_out`: a design violates a law under stated parameters.
+
+</td>
+<td width="33%" valign="top">
+
+### [**Registry**](lean/registry)
+
+One file per law, pinned to a module path and a statement hash. Laws move `proposed → candidate → accepted → contested → retired`, and are retired, never removed.
+
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center">
+
+<sub><b>ADJACENT</b></sub> · [**Physlib**](https://github.com/leanprover-community/physlib) · [**Delphi**](https://github.com/fractastical/delphi) →
+
+</td>
+</tr>
+</table>
+
+A proof here shows that a statement follows from a named model; whether organisms satisfy the model is an empirical question, answered elsewhere by data tests. LeanBio follows [Physlib](https://github.com/leanprover-community/physlib)'s conventions and shares its toolchain and Mathlib pin (`v4.35.0`), so a result can move between the two without a port. The laws, joined to the claims, data tests and images, are at [delphibio.org/laws](https://delphibio.org/laws/).
 
 ## What is in it
 
