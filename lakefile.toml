@@ -1,6 +1,6 @@
 name = "leanbio"
 version = "0.1.0"
-defaultTargets = ["Delphi"]
+defaultTargets = ["Delphi", "ThompsonLaws", "DarwinLaws"]
 
 # Same toolchain and Mathlib pin as Physlib (leanprover-community/physlib), so results can move
 # between the two libraries without a port.
@@ -13,4 +13,14 @@ rev = "v4.35.0"
 # every theorem by its module path and statement hash, so renaming modules would re-pin every law set.
 [[lean_lib]]
 name = "Delphi"
+srcDir = "lean"
+
+# Theorems attached to single source works in Delphi (claim-sources/<work>/lean), moved here 2026-11-12.
+# Namespaces kept so the per-claim Lean reports in Delphi still resolve.
+[[lean_lib]]
+name = "ThompsonLaws"
+srcDir = "lean"
+
+[[lean_lib]]
+name = "DarwinLaws"
 srcDir = "lean"

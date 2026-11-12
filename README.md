@@ -111,9 +111,10 @@ scaling, flight, physiology, population genetics, cell geometry, crystallography
 The current list, with the claims, data tests and images each law is joined to, is at
 [delphibio.org/laws](https://delphibio.org/laws/).
 
-Not yet moved here: the Lean projects attached to individual source works in the Delphi repo
-(`ThompsonLaws`, `DarwinLaws`, `WolframLaws`, the hygromorph mechanics) and the `Patterns`
-generators. Five of the laws are physics (Boyle, Fick, Bragg, the crystallographic restriction,
+`lean/ThompsonLaws/` (12 modules: cell packing, spirals, Murray's law, hollow tubes, hygromorph mechanics,
+magnitude) and `lean/DarwinLaws/` (4) are the theorem sets attached to *On Growth and Form* and *On the Origin
+of Species* in Delphi, moved here 2026-11-12 with their namespaces. Not yet moved: `WolframLaws` (three modules
+that do not compile and prove no claim) and the `Patterns` generators. Five of the laws are physics (Boyle, Fick, Bragg, the crystallographic restriction,
 Plateau's rules). Checked against Physlib `31a3730` on 10 November 2026: Physlib has none of them,
 so LeanBio still states them. Boyle is the nearest miss. Physlib proves `P V = n R T` and notes that
 Boyle follows, without proving it, while LeanBio takes `P V` constant as a hypothesis of the
