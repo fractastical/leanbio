@@ -15,6 +15,7 @@ import Delphi.Favored
 import Delphi.Blueprint
 import Delphi.Thompson
 import Delphi.Turing
+import Delphi.Relational
 import Delphi.CellGeometry
 import Delphi.Certificates.AFlyingFish
 import Delphi.Constraints
@@ -75,3 +76,7 @@ import Delphi.Constraints
 #print axioms Delphi.Turing.turing_instability_iff
 #print axioms Delphi.Turing.no_instability_of_equal_diffusivity
 #print axioms Delphi.Turing.witness
+#print axioms Delphi.Relational.replicates_iff_evalInjective
+#print axioms Delphi.Relational.not_replicates_full
+#print axioms Delphi.Relational.replicates_constant
+#print axioms Delphi.Relational.witness
