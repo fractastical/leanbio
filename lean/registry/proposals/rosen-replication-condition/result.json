@@ -68,7 +68,7 @@
       "module": "lean/Delphi/Relational.lean",
       "theorem": "Delphi.Relational.replicates_iff_evalInjective",
       "structure": null,
-      "commit": "cb92aafce7a90fc02f62126faa04ba66dc90e897",
+      "commit": "aad179bd7017fec5935b5e4ecc4a2edcdb400206",
       "statement_sha256": "164c610b4df87d88c23df30cbe2d279d02e20ccbdedc1b8130f67474f1cadc79",
       "content_hash": "91389ef2445aa0d20b276dd1c131a4913d9e84a6e42636b5fc9b3968ba4a30ac"
     },
@@ -95,7 +95,7 @@
         "doi:10.1016/j.jtbi.2005.07.007"
       ],
       "observations": [],
-      "note": "A proof that the condition is necessary and sufficient in the model. No data test exists or is claimed. Claim louie2012-04 in the claim source github.com/rsthornton/delphi-relational, which carries the three readings."
+      "note": "A proof that the condition is necessary and sufficient in the model. No data test exists or is claimed. Claim louie2012-04 in the claim source github.com/halcyonic-systems/delphi-relational, which carries the three readings."
     },
     "sources": [
       "doi:10.1080/03081079.2011.622088"
@@ -125,5 +125,5 @@
     ],
     "content_hash": "91389ef2445aa0d20b276dd1c131a4913d9e84a6e42636b5fc9b3968ba4a30ac"
   },
-  "checked_at": "2026-11-16T16:12:22.294Z"
+  "checked_at": "2026-11-16T17:47:57.057Z"
 }

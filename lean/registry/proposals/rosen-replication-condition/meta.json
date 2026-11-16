@@ -29,7 +29,7 @@
       "doi:10.1016/j.jtbi.2005.07.007"
     ],
     "observations": [],
-    "note": "A proof that the condition is necessary and sufficient in the model. No data test exists or is claimed. Claim louie2012-04 in the claim source github.com/rsthornton/delphi-relational, which carries the three readings."
+    "note": "A proof that the condition is necessary and sufficient in the model. No data test exists or is claimed. Claim louie2012-04 in the claim source github.com/halcyonic-systems/delphi-relational, which carries the three readings."
   },
   "sources": [
     "doi:10.1080/03081079.2011.622088"
