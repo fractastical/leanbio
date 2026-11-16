@@ -11,3 +11,7 @@ import ThompsonLaws.Mechanics
 import ThompsonLaws.Hygromorphs
 import ThompsonLaws.HamiltonScope
 import ThompsonLaws.Crystals
+import ThompsonLaws.HollowTube
+import ThompsonLaws.LimbBoneSimilarity
+import ThompsonLaws.MurrayCubic
+import ThompsonLaws.TwelvePentagons
