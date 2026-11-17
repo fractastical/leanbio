@@ -12,7 +12,7 @@
     {
       "name": "Delphi.Relational.EvalInjective",
       "statement": "Evaluation at b (Phi maps to Phi b) is one-to-one on the admissible repairs: two admissible repairs that produce the same metabolism at b are equal.",
-      "source": "Louie (2012) Int. J. General Systems 41(1):5-22, pp. 7-9, doi:10.1080/03081079.2011.622088: the replication map is obtained by inverting evaluation 'under stringent but not prohibitively strong conditions'. Stated informally as a one-to-one condition in Letelier et al. (2006) J. Theor. Biol. 238(4):949-961, doi:10.1016/j.jtbi.2005.07.007."
+      "source": "Louie (2012) Int. J. General Systems 41(1):5-22, pp. 7-9, doi:10.1080/03081079.2011.622088: the replication map is obtained by inverting evaluation, in Rosen's words as Louie quotes them (p. 8), 'under stringent but not prohibitively strong conditions'. Stated in prose as a one-to-one condition, and attributed to Rosen, in Letelier et al. (2006) J. Theor. Biol. 238(4):949-961, p. 955, footnote 11, doi:10.1016/j.jtbi.2005.07.007."
     }
   ],
   "scope": {

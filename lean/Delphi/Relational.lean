@@ -18,7 +18,8 @@ Louie's simplest (M,R)-system is the chain
 
 with metabolism `f ∈ H(A,B)` and repair `Φ ∈ H(B, H(A,B))`. A replication map
 `β : H(A,B) → H(B, H(A,B))` is obtained by inverting evaluation at a point `b ∈ B` (`Φ ↦ Φ b`),
-which the source says is possible "under stringent but not prohibitively strong conditions".
+which is possible, in Rosen's words as Louie quotes them (p. 8), "under stringent but not
+prohibitively strong conditions".
 
 The hom-sets are predicates on function types (`Network`): `Met f` says `f ∈ H(A,B)` and `Rep Φ`
 says `Φ ∈ H(B, H(A,B))`. Which maps are admissible is the modelling choice the theorems turn on.
@@ -37,7 +38,7 @@ another. `witness` shows the hypothesis `EvalInjective` is satisfiable.
 
 Prior work: Letelier, Soto-Andrade, Guíñez Abarzúa, Cornish-Bowden & Cárdenas (2006), Journal of
 Theoretical Biology 238(4), 949–961, doi:10.1016/j.jtbi.2005.07.007, state the one-to-one
-condition informally.
+condition in prose and attribute it to Rosen (p. 955, footnote 11).
 
 ## What is not proved here
 

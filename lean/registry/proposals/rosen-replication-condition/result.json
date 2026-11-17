@@ -46,8 +46,8 @@
       "ok": true,
       "results": [
         {
-          "at": 3756,
-          "line": 81,
+          "at": 3833,
+          "line": 82,
           "from": "=",
           "to": "≠",
           "rejected": true
@@ -68,16 +68,16 @@
       "module": "lean/Delphi/Relational.lean",
       "theorem": "Delphi.Relational.replicates_iff_evalInjective",
       "structure": null,
-      "commit": "aad179bd7017fec5935b5e4ecc4a2edcdb400206",
+      "commit": "2a397649311942cdc4fd7e10652617a460973c3f",
       "statement_sha256": "164c610b4df87d88c23df30cbe2d279d02e20ccbdedc1b8130f67474f1cadc79",
-      "content_hash": "91389ef2445aa0d20b276dd1c131a4913d9e84a6e42636b5fc9b3968ba4a30ac"
+      "content_hash": "d1db8145053c1955e85bfc1062387949dfea7e97af73751e0da852c381a8cf5d"
     },
     "statement_en": "In the simplest (M,R)-system A --f--> B --Phi--> H(A,B), with the hom-sets taken as predicates on function types, a replication map at a point b (a map beta from metabolisms to repairs with beta(Phi b) = Phi for every admissible repair Phi) exists if and only if evaluation at b is one-to-one on the admissible repairs. Corollaries: if every map B -> (A -> B) is admissible, B has two points and there are two different maps A -> B, replication does not exist; if only constant repairs are admissible, it exists at every b.",
     "hypotheses": [
       {
         "name": "Delphi.Relational.EvalInjective",
         "statement": "Evaluation at b (Phi maps to Phi b) is one-to-one on the admissible repairs: two admissible repairs that produce the same metabolism at b are equal.",
-        "source": "Louie (2012) Int. J. General Systems 41(1):5-22, pp. 7-9, doi:10.1080/03081079.2011.622088: the replication map is obtained by inverting evaluation 'under stringent but not prohibitively strong conditions'. Stated informally as a one-to-one condition in Letelier et al. (2006) J. Theor. Biol. 238(4):949-961, doi:10.1016/j.jtbi.2005.07.007."
+        "source": "Louie (2012) Int. J. General Systems 41(1):5-22, pp. 7-9, doi:10.1080/03081079.2011.622088: the replication map is obtained by inverting evaluation, in Rosen's words as Louie quotes them (p. 8), 'under stringent but not prohibitively strong conditions'. Stated in prose as a one-to-one condition, and attributed to Rosen, in Letelier et al. (2006) J. Theor. Biol. 238(4):949-961, p. 955, footnote 11, doi:10.1016/j.jtbi.2005.07.007."
       }
     ],
     "scope": {
@@ -119,11 +119,11 @@
     "history": [
       {
         "version": "1.0.0",
-        "date": "2026-11-16",
+        "date": "2026-11-17",
         "change": "propose.mjs against lawset 1.6.0: candidate"
       }
     ],
-    "content_hash": "91389ef2445aa0d20b276dd1c131a4913d9e84a6e42636b5fc9b3968ba4a30ac"
+    "content_hash": "d1db8145053c1955e85bfc1062387949dfea7e97af73751e0da852c381a8cf5d"
   },
-  "checked_at": "2026-11-16T17:47:57.057Z"
+  "checked_at": "2026-11-17T17:39:57.786Z"
 }
