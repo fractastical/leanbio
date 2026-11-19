@@ -10,6 +10,7 @@ import Delphi.Favored
 import Delphi.Blueprint
 import Delphi.Thompson
 import Delphi.Turing
+import Delphi.Relational
 import Delphi.CellGeometry
 import Delphi.Crystals
 import Delphi.Certificates.AFlyingFish

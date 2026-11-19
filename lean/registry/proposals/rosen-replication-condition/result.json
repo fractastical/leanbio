@@ -1,0 +1,129 @@
+{
+  "law_id": "rosen-replication-condition",
+  "status": "candidate",
+  "lawset": "1.6.0",
+  "steps": {
+    "forbidden": {
+      "ok": true,
+      "found": []
+    },
+    "build": {
+      "ok": true,
+      "output": "'Delphi.Relational.replicates_iff_evalInjective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Delphi.Relational.witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "axioms": {
+      "ok": true,
+      "printed": {
+        "Delphi.Relational.replicates_iff_evalInjective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delphi.Relational.witness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "witness": {
+      "ok": true,
+      "name": "Delphi.Relational.witness",
+      "statement": "theorem witness : Nonempty Instance",
+      "via": "bundle Instance has a field of type Network, a hypothesis of Delphi.Relational.replicates_iff_evalInjective"
+    },
+    "joint": {
+      "ok": true,
+      "lawset": "1.6.0",
+      "peers": [],
+      "outcome": "theorem from standard axioms with no shared-scope hypotheses: consistent with every satisfiable law set"
+    },
+    "bridge": {
+      "ok": true,
+      "note": "no structure"
+    },
+    "mutants": {
+      "ok": true,
+      "results": [
+        {
+          "at": 3833,
+          "line": 82,
+          "from": "=",
+          "to": "≠",
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "reasons": [],
+  "law": {
+    "law_id": "rosen-replication-condition",
+    "version": "1.0.0",
+    "kind": "biological",
+    "class": "theorem",
+    "status": "candidate",
+    "label": "Rosen's replication condition: replication in an (M,R)-system exists iff evaluation is one-to-one on the repairs",
+    "level": null,
+    "lean_ref": {
+      "module": "lean/Delphi/Relational.lean",
+      "theorem": "Delphi.Relational.replicates_iff_evalInjective",
+      "structure": null,
+      "commit": "2a397649311942cdc4fd7e10652617a460973c3f",
+      "statement_sha256": "164c610b4df87d88c23df30cbe2d279d02e20ccbdedc1b8130f67474f1cadc79",
+      "content_hash": "d1db8145053c1955e85bfc1062387949dfea7e97af73751e0da852c381a8cf5d"
+    },
+    "statement_en": "In the simplest (M,R)-system A --f--> B --Phi--> H(A,B), with the hom-sets taken as predicates on function types, a replication map at a point b (a map beta from metabolisms to repairs with beta(Phi b) = Phi for every admissible repair Phi) exists if and only if evaluation at b is one-to-one on the admissible repairs. Corollaries: if every map B -> (A -> B) is admissible, B has two points and there are two different maps A -> B, replication does not exist; if only constant repairs are admissible, it exists at every b.",
+    "hypotheses": [
+      {
+        "name": "Delphi.Relational.EvalInjective",
+        "statement": "Evaluation at b (Phi maps to Phi b) is one-to-one on the admissible repairs: two admissible repairs that produce the same metabolism at b are equal.",
+        "source": "Louie (2012) Int. J. General Systems 41(1):5-22, pp. 7-9, doi:10.1080/03081079.2011.622088: the replication map is obtained by inverting evaluation, in Rosen's words as Louie quotes them (p. 8), 'under stringent but not prohibitively strong conditions'. Stated in prose as a one-to-one condition, and attributed to Rosen, in Letelier et al. (2006) J. Theor. Biol. 238(4):949-961, p. 955, footnote 11, doi:10.1016/j.jtbi.2005.07.007."
+      }
+    ],
+    "scope": {
+      "taxa": [
+        "any"
+      ],
+      "life_stages": [],
+      "ranges": {},
+      "basis": "a theorem about a model: Louie's simplest (M,R)-system, with hom-sets encoded as predicates on function types. It says nothing about whether a cell realises an (M,R)-system or which hom-sets a living system realises. Category-theoretic, lambda-calculus and process-algebra encodings are not covered, and neither is closure to efficient causation or computability."
+    },
+    "shared_scope": null,
+    "evidence": {
+      "sources": [
+        "doi:10.1080/03081079.2011.622088",
+        "doi:10.1016/j.jtbi.2005.07.007"
+      ],
+      "observations": [],
+      "note": "A proof that the condition is necessary and sufficient in the model. No data test exists or is claimed. Claim louie2012-04 in the claim source github.com/halcyonic-systems/delphi-relational, which carries the three readings."
+    },
+    "sources": [
+      "doi:10.1080/03081079.2011.622088"
+    ],
+    "non_vacuity_witness": {
+      "lean": "Delphi.Relational.witness",
+      "statement": "theorem witness : Nonempty Instance",
+      "file": "lean/Delphi/Relational.lean"
+    },
+    "constraints": [],
+    "introduced_in": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "retired_reason": null,
+    "contested_with": [],
+    "approval": null,
+    "origin": {
+      "by_role": "outside-contributor, with agent:claude-code (claude-fable-5-2)",
+      "kind": "agent"
+    },
+    "history": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-17",
+        "change": "propose.mjs against lawset 1.6.0: candidate"
+      }
+    ],
+    "content_hash": "d1db8145053c1955e85bfc1062387949dfea7e97af73751e0da852c381a8cf5d"
+  },
+  "checked_at": "2026-11-17T17:39:57.786Z"
+}
